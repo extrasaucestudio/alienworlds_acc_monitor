@@ -65,9 +65,9 @@ export default function AccountInfo(props) {
             console.log("TRY ",tries)
             await axios.post(`${v1[api_index%v1.length]}/v1/chain/get_currency_balance`,
             {
-                "code": "alien.worlds",
+                "code": "remixgamingx",
                 "account": user,
-                "symbol": "TLM"
+                "symbol": "RMX"
             })
             .then((resp) => {
                 if(resp && resp.data) {
@@ -167,7 +167,7 @@ export default function AccountInfo(props) {
         while(tries < 3) {
             console.log("TRY ",tries)
             await axios.post(`${v1[api_index%v1.length]}/v1/chain/get_table_rows`,
-            {json: true, code: "federation", scope: "federation", table: 'players', lower_bound: user, upper_bound: user})
+            {json: true, code: "freecitygamx", scope: "freecitygamx", table: 'users', lower_bound: user, upper_bound: user})
             .then((resp) => {
                 if(resp && resp.data) {
                     result = resp.data
@@ -216,7 +216,7 @@ export default function AccountInfo(props) {
         while(tries < 3) {
             console.log("TRY ",tries)
             await axios.post(`${v1[api_index%v1.length]}/v1/chain/get_table_rows`,
-            {json: true, code: "m.federation", scope: "m.federation", table: 'miners', lower_bound: user, upper_bound: user})
+            {json: true, code: "freecitygamx", scope: "freecitygamx", table: 'users', lower_bound: user, upper_bound: user})
             .then((resp) => {
                 if(resp && resp.data) {
                     result = resp.data
@@ -354,7 +354,7 @@ export default function AccountInfo(props) {
         while(tries < 3) {
             console.log("TRY ",tries)
             await axios.post(`${v1[api_index%v1.length]}/v1/chain/get_table_rows`,
-            {json: true, code: "m.federation", scope: "m.federation", table: 'claims', lower_bound: user, upper_bound: user})
+            {json: true, code: "freecitygamx", scope: "freecitygamx", table: 'claims', lower_bound: user, upper_bound: user})
             .then((resp) => {
                 if(resp && resp.data) {
                     result = resp.data

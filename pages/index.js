@@ -59,12 +59,12 @@ export default function Home(props) {
   }
 
   const fetchTLMPrice = async () => {
-    return axios.get('https://api.binance.com/api/v3/avgPrice?symbol=TLMUSDT')
+    return axios.get('https://api.binance.com/api/v3/avgPrice?symbol=RMXUSDT')
     .then(({data}) => {
       return data.price
     })
     .catch((err) => {
-      console.log("ERROR: cannot get TLM market price")
+      console.log("ERROR: cannot get RMX market price")
       console.log(err)
       return 0
     })
@@ -126,8 +126,8 @@ export default function Home(props) {
   return (
     <div className="flex flex-col min-h-screen items-center justify-center mt-10 px-2 lg:px-0">
       <Head>
-        <title>Alienworlds Account Monitor | The only AW monitor website you needed | Monitor CPU,WAX,TLM,NFT, etc. of alienworlds here!</title>
-        <meta name="description" content="Alienworlds.fun the only alienworlds monitor website that you needed. Included CPU,WAX,TLM,NFT,etc. No login needed. Start monitoring your alienworlds team now!" />
+        <title>Alienworlds Account Monitor | The only AW monitor website you needed | Monitor CPU,WAX,RMX,NFT, etc. of alienworlds here!</title>
+        <meta name="description" content="Alienworlds.fun the only alienworlds monitor website that you needed. Included CPU,WAX,RMX,NFT,etc. No login needed. Start monitoring your alienworlds team now!" />
       </Head>
 
       <main className="flex flex-col w-full lg:w-3/6">

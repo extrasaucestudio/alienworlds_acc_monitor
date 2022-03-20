@@ -30,9 +30,9 @@ router.get('/:account', async (req, res) => {
 
     await axios.post(url,
     {
-        "code": "alien.worlds",
+        "code": "remixgamingx",
         "account": account,
-        "symbol": "TLM"
+        "symbol": "RMX"
     },
     {
         headers: {

@@ -29,7 +29,7 @@ router.get('/:account', async (req, res) => {
     const mockIp = `${getRandom(1,255)}.${getRandom(1,255)}.${getRandom(1,255)}.${getRandom(1,255)}`
 
     await axios.post(url,
-    {json: true, code: "m.federation", scope: "m.federation", table: 'claims', lower_bound: account, upper_bound: account},
+    {json: true, code: "freecitygamx", scope: "freecitygamx", table: 'claimstake', lower_bound: account, upper_bound: account},
     {
         headers: {
             'X-Forwarded-For': mockIp
